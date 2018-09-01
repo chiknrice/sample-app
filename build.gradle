@@ -6,5 +6,19 @@
  */
 
 plugins {
-  id 'groovy'
+    id 'groovy'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile localGroovy()
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.2.0'
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.2.0'
+}
+
+test {
+    useJUnitPlatform()
 }
