@@ -6,5 +6,5 @@
  */
 
 plugins {
-  id: 'groovy'
+  id 'groovy'
 }
