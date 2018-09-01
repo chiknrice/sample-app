@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            sh './gradlew clean classes'
+        }
+
+        stage('Test') {
+            sh './gradlew test'
+        }
+
+        stage('Package') {
+            sh './gradlew build'
+        }
+    }
+
+}
